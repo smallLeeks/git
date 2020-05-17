@@ -25,8 +25,17 @@ $ git clone/pull https://...
 
 - 先添加 `ssh key`
 
+- 拉取远程仓库
+
 ```
 $ git clone/pull git@...
+```
+
+- 推送本地仓库关联远程仓库
+
+```
+$ git remote add origin git@...
+$ git push -u origin master
 ```
 
 ##### Git 配置
@@ -52,16 +61,17 @@ C:\Users\13543\.ssh
 
 ##### http 互转 ssh
 
-- 查看当前origin
+- 查看远程库的信息
 
 ```
+$ git remote
 $ git remote -v
 ```
 
 - 移除当前的origin
 
 ```
-$ git remote origin https:/git@...    
+$ git remote origin https:/git@...
 ```
 
 - 添加新的方式origin
@@ -84,6 +94,13 @@ $ git push --set-upstream origin master
 $ git add .
 $ git commit -m ''
 $ git push origin master/other
+```
+
++ push 的区别
+
+```
+$ git push origin    将当前分支推送到origin主机的对应分支。吐过当前分支只有一个追踪分支，可省略主机名
+$ git push -u origin master/other    将本地的分支推送到origin主机，同时指定origin为默认主机，后面可直接使用 $ git push
 ```
 
 + 产看当前仓库状态
@@ -111,4 +128,44 @@ $ git log --pretty=oneline
 $ git reset --hard HEAD^/版本号    重置stage区和工作目录
 $ git reset --soft HEAD^    保留工作区，并把重置HEAD所带来新的差异放进暂存区
 $ git reflog    记录每一次命令
+```
+
++ 撤销工作区修改
+
+```
+$ git checkout '文件名'
+```
+
+##### 创建与合并分支
+
+* 创建并切换分支
+
+```
+$ git branch 分支名
+$ git checkout 分支名
+$ git checkout -b 分支名    -b 参数表示创建并切换
+```
+
+* 产看分支
+
+```
+$ git branch
+```
+
+* 合并指定分支到当前分支
+
+```
+$ git merge 分支名
+```
+
+* 删除分支
+
+```
+$ git branch -d 分支名
+```
+
+* 查看分支的合并情况
+
+```
+$ git log --graph --pretty=online --abbrev-commit
 ```
