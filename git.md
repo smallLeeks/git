@@ -9,6 +9,7 @@ $ mkdir ''
 $ cd ''
 $ pwd
 $ git init
+$ git branch --set-upstream-to=origin/dev    指定本地分支与远程origin分支链接
 ```
 
 > http模式
@@ -40,9 +41,24 @@ $ git push -u origin master
 
 ##### Git 配置
 
++ 全局设置账号密码
+
 ```
 $ git config --global user.name ''
 $ git config --global user.email ''
+```
+
++ 查看账号密码
+
+```
+$ git config user.name
+$ git config user.email
+```
+
++ 记住密码
+
+```
+$ git config --global credential.helper store
 ```
 
 ##### 创建 ssh key
@@ -157,6 +173,12 @@ $ git branch
 
 ```
 $ git merge 分支名
+```
+
++ 重命名分支
+
+```
+$ git branch -m dev xxx
 ```
 
 * 删除分支
