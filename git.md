@@ -115,11 +115,12 @@ $ git status
 $ git diff '文件名'
 ```
 
-+ 查看日志
++ 查看提交日志
 
 ```
 $ git log
-$ git log --pretty=oneline
+$ git log --pretty=oneline    详细的log日志
+$ Q    退出
 ```
 
 + 版本回退
