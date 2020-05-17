@@ -87,7 +87,7 @@ $ git remote -v
 - 移除当前的origin
 
 ```
-$ git remote origin https:/git@...
+$ git remote remove origin
 ```
 
 - 添加新的方式origin
@@ -144,7 +144,8 @@ $ Q    退出
 ```
 $ git reset --hard HEAD^/版本号    重置stage区和工作目录
 $ git reset --soft HEAD^    保留工作区，并把重置HEAD所带来新的差异放进暂存区
-$ git reflog    记录每一次命令
+$ git reflog    记录所有分支每一次命令
+$ git reflog --date=iso    以标准时间展示所有分支的每一次命令
 ```
 
 + 撤销工作区修改
@@ -167,6 +168,9 @@ $ git checkout -b 分支名    -b 参数表示创建并切换
 
 ```
 $ git branch
+$ git branch -l    查看本地分支
+$ git branch -r    查看远程分支
+$ git branch -a    查看本地和远程所有分支
 ```
 
 * 合并指定分支到当前分支
@@ -175,20 +179,36 @@ $ git branch
 $ git merge 分支名
 ```
 
-+ 重命名分支
++ 重命名本都分支
 
 ```
 $ git branch -m dev xxx
 ```
 
++ 重命名远程分支
+
+```
+$ git branch -d -r 分支名
+$ git push 本地的分支
+```
+
 * 删除分支
 
 ```
-$ git branch -d 分支名
+$ git branch -d 分支名    删除本地分支
+$ git branch -d -r 分支名    删除远程分支
+```
+
++ 恢复已删除的远程分支
+
+```
+$ git reflog date=iso
+$ git checkout -b 分支名 最近commitID
+$ git push origin -u 分支名
 ```
 
 * 查看分支的合并情况
 
 ```
-$ git log --graph --pretty=online --abbrev-commit
+$ git log --graph --pretty=oneline --abbrev-commit
 ```
