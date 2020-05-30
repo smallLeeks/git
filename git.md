@@ -35,6 +35,7 @@ $ git clone/pull git@...
 - 推送本地仓库关联远程仓库
 
 ```
+$ git init
 $ git remote add origin git@...
 $ git push -u origin master
 ```
@@ -202,7 +203,7 @@ $ git branch -d -r 分支名    删除远程分支
 + 恢复已删除的远程分支
 
 ```
-$ git reflog date=iso
+$ git reflog --date=iso
 $ git checkout -b 分支名 最近commitID
 $ git push origin -u 分支名
 ```
