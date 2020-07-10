@@ -9,7 +9,6 @@ $ mkdir ''
 $ cd ''
 $ pwd
 $ git init
-$ git branch --set-upstream-to=origin/dev    指定本地分支与远程origin分支链接
 ```
 
 > http模式
@@ -38,6 +37,7 @@ $ git clone/pull git@...
 $ git init
 $ git remote add origin git@...
 $ git push -u origin master
+$ git branch --set-upstream-to=origin/dev    指定本地分支与远程origin分支链接
 ```
 
 ##### Git 配置
