@@ -142,7 +142,7 @@ $ git push origin    将当前分支推送到origin主机的对应分支。吐�
 $ git push -u origin master/other    将本地的分支推送到origin主机，同时指定origin为默认主机，后面可直接使用 $ git push
 ```
 
-+ 产看当前仓库状态
++ 查看当前仓库状态
 
 ```
 $ git status
@@ -159,6 +159,7 @@ $ git diff '文件名'
 ```
 $ git log
 $ git log --pretty=oneline    详细的log日志
+$ git log --pretty=format:'%h: %s'
 $ Q    退出
 ```
 
@@ -189,7 +190,7 @@ $ git checkout -b 分支名    -b 参数表示创建并切换
 $ git checkout -b feature/分支名 origin/master
 ```
 
-* 产看分支
+* git branch
 
 ```
 $ git branch
@@ -198,10 +199,10 @@ $ git branch -r    查看远程分支
 $ git branch -a    查看本地和远程所有分支
 ```
 
-* 合并指定分支到当前分支
+* git merge
 
 ```
-$ git merge 分支名
+$ git merge 分支名  合并指定分支到当前分支
 ```
 
 + 重命名本都分支
