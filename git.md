@@ -120,18 +120,21 @@ $ git remote add origin https:/git@...
 $ git push --set-upstream origin master
 ```
 
-##### Git 提交
-
-+ 提交
+##### Git add
 
 ```
 $ git add .    提交新文件（new）和被修改（modified）文件，不包括被删除（deleted）的文件
 $ git add -u    提交被修改（modified）和被删除（deleted）文件，不包括新文件（new）
 $ git add -A    提交所有变化
-$ git commit -m ''
-$ git push origin master/other
 ```
 
+##### Git提交信息
+```
+$ git commit -m '' 或者 git commit [file1] [file2] -m '' 提交暂存区到本地仓库
+$ git commit -am '' 设置修改文件不需要执行git add，直接提交
+```
+
+##### Git推送
 + push 的区别
 
 ```
