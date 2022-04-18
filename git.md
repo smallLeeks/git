@@ -2,6 +2,20 @@
 
 ##### git两种链接方式：http 和 ssh
 
+git全局配置
+
+```
+$ git config --system --list 查看系统配置
+$ git config --local --list 查看当前仓库配置
+$ git config --global -list 查看Git所有配置
+$ git config --global --uset user.name 删除全局配置项
+$ git config --global --edit 编辑配置文件
+
+手动设置config
+$ git config --global user.name ''
+$ git config --global user.email ''
+```
+
 这两种方式的主要区别在于：使用 `http url (git clone/pull)` 对于初学者会比较方便
 
 ```
@@ -29,6 +43,8 @@ $ git clone/pull https://...
 
 ```
 $ git clone/pull git@...
+
+$ git fetch origin 分支名
 ```
 
 - 推送本地仓库关联远程仓库
