@@ -217,8 +217,11 @@ $ git push 本地的分支
 * 删除分支
 
 ```
-$ git branch -d 分支名    删除本地分支
-$ git branch -d -r 分支名    删除远程分支
+$ git branch -d 分支名  git beanch -delete 分支名  删除本地分支
+$ git push origin --delete 分支名    删除远程分支
+
+$ git branch -d 会在删除钱检查merge状态（如果该分支有提交未进行合并，则会删除失败）
+$ git branch -D 是git branch --delete --force的简写，它会强制删除分支（有提交未进行合并，也会删除成功）
 ```
 
 + 恢复已删除的远程分支
