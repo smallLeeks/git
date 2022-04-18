@@ -186,7 +186,6 @@ $ git checkout '文件名'
 $ git branch 分支名
 $ git checkout 分支名
 $ git checkout -b 分支名    -b 参数表示创建并切换
-
 $ git checkout -b feature/分支名 origin/master
 ```
 
@@ -197,6 +196,9 @@ $ git branch
 $ git branch -l    查看本地分支
 $ git branch -r    查看远程分支
 $ git branch -a    查看本地和远程所有分支
+$ git branch -vv  查看本地分支与远程分支
+$ git branch -u origin/远程分支名  将本地分支与远程分支关联起来
+$ git branch --unset-upstream  撤销本地分支与远程分支的映射关系
 ```
 
 * git merge
