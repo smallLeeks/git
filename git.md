@@ -166,6 +166,8 @@ $ git checkout '文件名'
 $ git branch 分支名
 $ git checkout 分支名
 $ git checkout -b 分支名    -b 参数表示创建并切换
+
+$ git checkout -b feature/分支名 origin/master
 ```
 
 * 产看分支
