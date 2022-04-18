@@ -178,18 +178,15 @@ $ git reflog --date=iso    以标准时间展示所有分支的每一次命令
 $ git checkout '文件名'
 ```
 
-##### 创建与合并分支
-
-* 创建并切换分支
+##### git checkout
 
 ```
-$ git branch 分支名
 $ git checkout 分支名
 $ git checkout -b 分支名    -b 参数表示创建并切换
 $ git checkout -b feature/分支名 origin/master
 ```
 
-* git branch
+##### git branch
 
 ```
 $ git branch
@@ -199,6 +196,28 @@ $ git branch -a    查看本地和远程所有分支
 $ git branch -vv  查看本地分支与远程分支
 $ git branch -u origin/远程分支名  将本地分支与远程分支关联起来
 $ git branch --unset-upstream  撤销本地分支与远程分支的映射关系
+```
+
+##### git rebase
+```
+$ git rebase -i commit哈希值
+1：i  进入编辑
+    p (pick): 保留改commit
+    r (reword): 保留该commit，但是需要修改该commit的注释
+    e (edit): 保留该commit，但我要停下来修改该提交(不仅仅修改注释)
+    s (squash): 将该commit合并到前一个commit
+    f (fixup): 将该commit合并到前一个commit，但是不要保留提交的注释信息
+    x (exec): 执行shell命令
+    d (drop): 丢弃该commit
+2：ESC  退出操作
+3：:wq  保存并退出
+
+$ git rebase --edit-todo 再次进入编辑
+
+$ git rebase --continue  进入下一个界面，可以更新commit这是一个不可改的步骤
+1: :wq  保存并退出
+
+$ git push -f
 ```
 
 * git merge
