@@ -81,7 +81,6 @@ $ git config --global credential.helper store
 ```
 
 ##### 创建 ssh key
-
 - 本地 ssh-key 创建
 
 ```
@@ -224,7 +223,6 @@ $ git rebase --continue  进入下一个界面，可以更新commit这是一个�
 1: :wq  保存并退出
 
 $ git push -f
-
 ```
 
 ##### git merge
