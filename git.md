@@ -76,6 +76,8 @@ $ git config user.email
 
 + 记住密码
 
+aaaaaaaaaaaaaaaaaa
+
 ```
 $ git config --global credential.helper store
 ```
