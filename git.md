@@ -81,6 +81,7 @@ $ git config --global credential.helper store
 ```
 
 ##### 创建 ssh key
+
 - 本地 ssh-key 创建
 
 ```
@@ -88,7 +89,6 @@ $ ssh-keygrn -t rsa -C "email地址"
 ```
 
 - .ssh 文件地址
-bbbbbbbbbbbbbbb
 
 ```
 C:\Users\13543\.ssh
@@ -146,7 +146,7 @@ $ git push -u origin master/other    将本地的分支推送到origin主机，�
 $ git push -f  强制推送
 ```
 
-+ 查看当前仓库状态
++ 产看当前仓库状态
 
 ```
 $ git status
@@ -183,15 +183,19 @@ $ git reset --soft HEAD^    保留工作区，并把重置HEAD所带来新的差
 $ git checkout '文件名'
 ```
 
-##### git checkout
+##### 创建与合并分支
+
+* 创建并切换分支
 
 ```
+$ git branch 分支名
 $ git checkout 分支名
 $ git checkout -b 分支名    -b 参数表示创建并切换
+
 $ git checkout -b feature/分支名 origin/master
 ```
 
-##### git branch
+* 产看分支
 
 ```
 $ git branch
@@ -230,24 +234,7 @@ $ git push -f
 ##### git merge
 
 ```
-$ git rebase -i commit哈希值
-1：i  进入编辑
-    p (pick): 保留改commit
-    r (reword): 保留该commit，但是需要修改该commit的注释
-    e (edit): 保留该commit，但我要停下来修改该提交(不仅仅修改注释)
-    s (squash): 将该commit合并到前一个commit
-    f (fixup): 将该commit合并到前一个commit，但是不要保留提交的注释信息
-    x (exec): 执行shell命令
-    d (drop): 丢弃该commit
-2：ESC  退出操作
-3：:wq  保存并退出
-
-$ git rebase --edit-todo 再次进入编辑
-
-$ git rebase --continue  进入下一个界面，可以更新commit这是一个不可改的步骤
-1: :wq  保存并退出
-
-$ git push -f
+$ git merge 分支名
 ```
 
 * 删除分支
