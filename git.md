@@ -56,6 +56,7 @@ $ git remote add origin git@...
 $ git push -u origin master
 $ git branch --set-upstream-to=origin/dev    指定本地分支与远程origin分支链接
 $ git remote remove origin  断开本地git链接
+$ git remote rm origin
 ```
 
 ##### Git 配置
