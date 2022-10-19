@@ -2,7 +2,7 @@
 
 ##### git两种链接方式：http 和 ssh
 
-git全局配置
+git全局配置测试1
 
 ```
 $ git config --system --list 查看系统配置
