@@ -180,8 +180,19 @@ $ git reset --soft HEAD^    保留工作区，并把重置HEAD所带来新的差
 
 + 撤销工作区修改
 
+```未使用 git add 缓存代码
+$ git checkout -- '文件名'
+$ git checkout .
 ```
-$ git checkout '文件名'
+
+```已使用 git add 缓存代码
+$ git reset HEAD '文件名'
+$ git reset HEAD .
+```
+
+```已使用 git commit 提交了代码
+$ git reset --hard HEAD^
+$ git reset --hard commitId
 ```
 
 ##### 创建与合并分支
