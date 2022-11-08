@@ -186,11 +186,13 @@ $ git checkout .
 ```
 
 ```已使用 git add 缓存代码
+$ git reset --mixed 文件退出暂存区，但是保留修改
 $ git reset HEAD '文件名'
 $ git reset HEAD .
 ```
 
 ```已使用 git commit 提交了代码
+$ git reset --soft HEAD^
 $ git reset --hard HEAD^
 $ git reset --hard commitId
 ```
